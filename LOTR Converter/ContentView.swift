@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        ZStack {
+	
+	@State var leftAmount = ""
+	@State var rightAmount = ""
+	
+	var body: some View {
+		ZStack {
 			// Back
 			Image("background")
 				.resizable()
@@ -40,8 +44,12 @@ struct ContentView: View {
 								.font(.headline)
 								.foregroundColor(.white)
 						}
+						.padding(.bottom, -5)
 						// Text field
-						Text("Text field")
+						TextField("Amount", text: $leftAmount)
+							.padding(7)
+							.background(Color(UIColor.systemGray6))
+							.cornerRadius(7)
 					}
 					
 					// "="
@@ -62,10 +70,18 @@ struct ContentView: View {
 								.scaledToFit()
 								.frame(height: 33)
 						}
+						.padding(.bottom, -5)
 						// Text field
-						Text("Text field")
+						TextField("Amount", text: $rightAmount)
+							.padding(7)
+							.background(Color(UIColor.systemGray6))
+							.cornerRadius(7)
+							.multilineTextAlignment(.trailing)
 					}
 				}
+				.padding()
+				.background(.black.opacity(0.7))
+				.cornerRadius(5)
 				
 				Spacer()
 				
@@ -79,7 +95,7 @@ struct ContentView: View {
 					}
 					.font(.largeTitle)
 					.foregroundColor(.white)
-					.padding(.trailing, 5)
+					.padding(.trailing)
 				}
 			}
 		}
@@ -87,7 +103,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
