@@ -13,7 +13,7 @@ struct ExchangeRate: View {
 	@State var text: String
 	@State var rightImage: String
 	
-    var body: some View {
+	var body: some View {
 		HStack {
 			// Left
 			Image(leftImage)
@@ -31,12 +31,12 @@ struct ExchangeRate: View {
 				.frame(height: 35)
 			
 		}
-    }
+	}
 }
 
 struct ExchangeRate_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		ExchangeRate(leftImage: "goldpiece", text: "1 Gold Piece = 4 Gold Pennies", rightImage: "goldpenny")
 			.previewLayout(.sizeThatFits)
-    }
+	}
 }
