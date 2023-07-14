@@ -38,7 +38,7 @@ struct ContentView: View {
 							Image("silverpiece")
 								.resizable()
 								.scaledToFit()
-								.frame(height: 33)
+								.frame(height: 35)
 							// Currency text
 							Text("Silver Piece")
 								.font(.headline)
@@ -68,7 +68,7 @@ struct ContentView: View {
 							Image("goldpiece")
 								.resizable()
 								.scaledToFit()
-								.frame(height: 33)
+								.frame(height: 35)
 						}
 						.padding(.bottom, -5)
 						// Text field
