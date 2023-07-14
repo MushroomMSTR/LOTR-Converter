@@ -36,7 +36,7 @@ struct ExchangeInfo: View {
 				// Done button
 				
 				Button("Done") {
-					
+					dismiss()
 				}
 				.font(.largeTitle)
 				.padding(10)
