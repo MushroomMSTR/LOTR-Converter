@@ -13,7 +13,7 @@ struct CurrencyIcon: View {
 	@State var currencyText: String
 	@State var currencyRarity: Color
 	
-    var body: some View {
+	var body: some View {
 		ZStack {
 			// Currency Image
 			Image(currencyImage)
@@ -26,18 +26,19 @@ struct CurrencyIcon: View {
 				Text(currencyText)
 					.padding(3)
 					.font(.caption)
-				.background(currencyRarity.opacity(0.75))
+					.background(currencyRarity.opacity(0.75))
 			}
 		}
 		.padding(3)
 		.frame(width: 100, height: 100)
 		.background(currencyRarity)
-		.cornerRadius(25)    }
+		.cornerRadius(25)
+	}
 }
 
 struct CurrencyIcon_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		CurrencyIcon(currencyImage: "copperpenny", currencyText: "Copper Penny", currencyRarity: .brown)
 			.previewLayout(.sizeThatFits)
-    }
+	}
 }

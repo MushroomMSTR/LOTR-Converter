@@ -5,7 +5,7 @@
 //  Created by NazarStf on 15.07.2023.
 //
 
-import Foundation
+import SwiftUI
 
 enum Currency: Double, CaseIterable {
 	case copperPenny = 640
@@ -29,4 +29,23 @@ enum currencyImage: String, CaseIterable {
 	case silverPiece = "silverpiece"
 	case goldPenny = "goldpenny"
 	case goldPiece = "goldpiece"
+}
+
+enum CurrencyRarity {
+	case copperPenny
+	case silverPenny
+	case silverPiece
+	case goldPenny
+	case goldPiece
+	
+	var color: Color {
+		switch self {
+		case .copperPenny:
+			return .brown
+		case .silverPenny, .silverPiece:
+			return .gray
+		case .goldPenny, .goldPiece:
+			return .orange
+		}
+	}
 }
