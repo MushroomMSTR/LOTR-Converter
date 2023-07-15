@@ -14,6 +14,16 @@
 		746D2E2C2A62DA37006B1208 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746D2E2B2A62DA37006B1208 /* Currency.swift */; };
 		746D2E2F2A630B74006B1208 /* IconGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746D2E2E2A630B74006B1208 /* IconGrid.swift */; };
 		746D2E312A630D1F006B1208 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746D2E302A630D1F006B1208 /* Helpers.swift */; };
+		746D2E3D2A633182006B1208 /* alphabet.gif in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E342A633182006B1208 /* alphabet.gif */; };
+		746D2E3E2A633182006B1208 /* ringbearer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E352A633182006B1208 /* ringbearer.gif */; };
+		746D2E3F2A633182006B1208 /* liesmich.html in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E362A633182006B1208 /* liesmich.html */; };
+		746D2E402A633182006B1208 /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E372A633182006B1208 /* readme.html */; };
+		746D2E412A633182006B1208 /* RINGM___.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E382A633182006B1208 /* RINGM___.TTF */; };
+		746D2E422A633182006B1208 /* file_id.diz in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E392A633182006B1208 /* file_id.diz */; };
+		746D2E432A633182006B1208 /* example1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E3A2A633182006B1208 /* example1.gif */; };
+		746D2E442A633182006B1208 /* example3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E3B2A633182006B1208 /* example3.gif */; };
+		746D2E452A633182006B1208 /* example2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 746D2E3C2A633182006B1208 /* example2.gif */; };
+		746D2E482A63354B006B1208 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746D2E472A63354B006B1208 /* CustomFont.swift */; };
 		74A4212E2A61251F00CAEB2C /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4212D2A61251F00CAEB2C /* ExchangeInfo.swift */; };
 		74E8E1222A61726800716AF4 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8E1212A61726800716AF4 /* ExchangeRate.swift */; };
 		74E8E1242A619A7000716AF4 /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8E1232A619A7000716AF4 /* SelectCurrency.swift */; };
@@ -29,6 +39,17 @@
 		746D2E2B2A62DA37006B1208 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		746D2E2E2A630B74006B1208 /* IconGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGrid.swift; sourceTree = "<group>"; };
 		746D2E302A630D1F006B1208 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		746D2E342A633182006B1208 /* alphabet.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = alphabet.gif; sourceTree = "<group>"; };
+		746D2E352A633182006B1208 /* ringbearer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ringbearer.gif; sourceTree = "<group>"; };
+		746D2E362A633182006B1208 /* liesmich.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = liesmich.html; sourceTree = "<group>"; };
+		746D2E372A633182006B1208 /* readme.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = readme.html; sourceTree = "<group>"; };
+		746D2E382A633182006B1208 /* RINGM___.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RINGM___.TTF"; sourceTree = "<group>"; };
+		746D2E392A633182006B1208 /* file_id.diz */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file_id.diz; sourceTree = "<group>"; };
+		746D2E3A2A633182006B1208 /* example1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example1.gif; sourceTree = "<group>"; };
+		746D2E3B2A633182006B1208 /* example3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example3.gif; sourceTree = "<group>"; };
+		746D2E3C2A633182006B1208 /* example2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example2.gif; sourceTree = "<group>"; };
+		746D2E462A633245006B1208 /* LOTR-Converter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LOTR-Converter-Info.plist"; sourceTree = SOURCE_ROOT; };
+		746D2E472A63354B006B1208 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		74A4212D2A61251F00CAEB2C /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
 		74E8E1212A61726800716AF4 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		74E8E1232A619A7000716AF4 /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
@@ -65,6 +86,8 @@
 		74229C9A2A5BC2FA00940C05 /* LOTR Converter */ = {
 			isa = PBXGroup;
 			children = (
+				746D2E462A633245006B1208 /* LOTR-Converter-Info.plist */,
+				746D2E322A63313F006B1208 /* Resourses */,
 				74229C9B2A5BC2FA00940C05 /* LOTR_ConverterApp.swift */,
 				74229C9D2A5BC2FA00940C05 /* ContentView.swift */,
 				74A4212D2A61251F00CAEB2C /* ExchangeInfo.swift */,
@@ -74,6 +97,7 @@
 				746D2E2B2A62DA37006B1208 /* Currency.swift */,
 				74E8E1252A61A07500716AF4 /* CurrencyIcon.swift */,
 				74E8E1212A61726800716AF4 /* ExchangeRate.swift */,
+				746D2E472A63354B006B1208 /* CustomFont.swift */,
 				74229C9F2A5BC2FB00940C05 /* Assets.xcassets */,
 				74229CA12A5BC2FB00940C05 /* Preview Content */,
 			);
@@ -86,6 +110,30 @@
 				74229CA22A5BC2FB00940C05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		746D2E322A63313F006B1208 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				746D2E332A633182006B1208 /* ringbearer */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		746D2E332A633182006B1208 /* ringbearer */ = {
+			isa = PBXGroup;
+			children = (
+				746D2E342A633182006B1208 /* alphabet.gif */,
+				746D2E352A633182006B1208 /* ringbearer.gif */,
+				746D2E362A633182006B1208 /* liesmich.html */,
+				746D2E372A633182006B1208 /* readme.html */,
+				746D2E382A633182006B1208 /* RINGM___.TTF */,
+				746D2E392A633182006B1208 /* file_id.diz */,
+				746D2E3A2A633182006B1208 /* example1.gif */,
+				746D2E3B2A633182006B1208 /* example3.gif */,
+				746D2E3C2A633182006B1208 /* example2.gif */,
+			);
+			path = ringbearer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +194,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746D2E3D2A633182006B1208 /* alphabet.gif in Resources */,
+				746D2E432A633182006B1208 /* example1.gif in Resources */,
 				74229CA32A5BC2FB00940C05 /* Preview Assets.xcassets in Resources */,
+				746D2E412A633182006B1208 /* RINGM___.TTF in Resources */,
+				746D2E452A633182006B1208 /* example2.gif in Resources */,
 				74229CA02A5BC2FB00940C05 /* Assets.xcassets in Resources */,
+				746D2E442A633182006B1208 /* example3.gif in Resources */,
+				746D2E422A633182006B1208 /* file_id.diz in Resources */,
+				746D2E3E2A633182006B1208 /* ringbearer.gif in Resources */,
+				746D2E402A633182006B1208 /* readme.html in Resources */,
+				746D2E3F2A633182006B1208 /* liesmich.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +220,7 @@
 				74E8E1242A619A7000716AF4 /* SelectCurrency.swift in Sources */,
 				74A4212E2A61251F00CAEB2C /* ExchangeInfo.swift in Sources */,
 				746D2E312A630D1F006B1208 /* Helpers.swift in Sources */,
+				746D2E482A63354B006B1208 /* CustomFont.swift in Sources */,
 				74229C9E2A5BC2FA00940C05 /* ContentView.swift in Sources */,
 				74229C9C2A5BC2FA00940C05 /* LOTR_ConverterApp.swift in Sources */,
 				746D2E2C2A62DA37006B1208 /* Currency.swift in Sources */,
@@ -298,6 +356,7 @@
 				DEVELOPMENT_TEAM = 7HMM775WP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LOTR-Converter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -327,6 +386,7 @@
 				DEVELOPMENT_TEAM = 7HMM775WP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LOTR-Converter-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

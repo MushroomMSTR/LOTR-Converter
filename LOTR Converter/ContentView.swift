@@ -34,8 +34,9 @@ struct ContentView: View {
 					.frame(height: 200)
 				// Currency exchange text
 				Text("Currency Exchange")
-					.font(.largeTitle)
+					.customFont(name: "Ringbearer", style: .largeTitle)
 					.foregroundColor(.white)
+
 				// Currency conversion section
 				HStack {
 					// Left

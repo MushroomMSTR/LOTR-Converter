@@ -24,7 +24,7 @@ struct SelectCurrency: View {
 			VStack {
 				// Text
 				Text("Select the currency you are starting with:")
-					.fontWeight(.semibold)
+					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
 				
 				// Currency Icon
@@ -32,7 +32,7 @@ struct SelectCurrency: View {
 				
 				// Text
 				Text("Select the currency you would like to convert:")
-					.fontWeight(.semibold)
+					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
 				
 				// Currency Icon
@@ -42,7 +42,7 @@ struct SelectCurrency: View {
 				Button("Done") {
 					dismiss()
 				}
-				.font(.largeTitle)
+				.customFont(name: "Ringbearer", style: .largeTitle)
 				.padding(10)
 				.foregroundColor(.white)
 				.background(.brown)
