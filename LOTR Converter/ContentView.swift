@@ -64,16 +64,19 @@ struct ContentView: View {
 							leftTyping = typing
 							leftAmountTemp = leftAmount
 						})
-							.padding(7)
-							.background(Color(UIColor.systemGray6))
-							.cornerRadius(7)
-							.keyboardType(.decimalPad)
-							.onChange(of: leftTyping ? leftAmount : leftAmountTemp) { _ in
+						.padding(7)
+						.background(Color(UIColor.systemGray6))
+						.cornerRadius(7)
+						.keyboardType(.decimalPad)
+						// For leftAmount
+						.onChange(of: leftTyping ? leftAmount : leftAmountTemp) { _ in
+							if !rightTyping {
 								rightAmount = leftCurrency.convert(amountString: leftAmount, to: rightCurrency)
 							}
-							.onChange(of: leftCurrency) { _ in
-								leftAmount = rightCurrency.convert(amountString: rightAmount, to: leftCurrency)
-							}
+						}
+						.onChange(of: leftCurrency) { _ in
+							leftAmount = rightCurrency.convert(amountString: rightAmount, to: leftCurrency)
+						}
 					}
 					
 					// "="
@@ -106,17 +109,20 @@ struct ContentView: View {
 							rightTyping = typing
 							rightAmountTemp = rightAmount
 						})
-							.padding(7)
-							.background(Color(UIColor.systemGray6))
-							.cornerRadius(7)
-							.multilineTextAlignment(.trailing)
-							.keyboardType(.decimalPad)
-							.onChange(of: rightTyping ? rightAmount : rightAmountTemp) { _ in
+						.padding(7)
+						.background(Color(UIColor.systemGray6))
+						.cornerRadius(7)
+						.multilineTextAlignment(.trailing)
+						.keyboardType(.decimalPad)
+						// For rightAmount
+						.onChange(of: rightTyping ? rightAmount : rightAmountTemp) { _ in
+							if !leftTyping {
 								leftAmount = rightCurrency.convert(amountString: rightAmount, to: leftCurrency)
 							}
-							.onChange(of: rightCurrency) { _ in
-								rightAmount = leftCurrency.convert(amountString: leftAmount, to: rightCurrency)
-							}
+						}
+						.onChange(of: rightCurrency) { _ in
+							rightAmount = leftCurrency.convert(amountString: leftAmount, to: rightCurrency)
+						}
 					}
 				}
 				.padding()

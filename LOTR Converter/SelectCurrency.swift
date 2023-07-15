@@ -36,7 +36,7 @@ struct SelectCurrency: View {
 					.multilineTextAlignment(.center)
 				
 				// Currency Icon
-				IconGrid(currency: $leftCurrency)
+				IconGrid(currency: $rightCurrency)
 				
 				// Done button
 				Button("Done") {
