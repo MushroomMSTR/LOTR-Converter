@@ -13,7 +13,8 @@ struct ContentView: View {
 	@State var rightAmount = ""
 	@State var leftCurrency: Currency = .silverPiece
 	@State var rightCurrency: Currency = .goldPiece
-	
+	@State var showSelectCurrency = false
+	@State var showExchangeInfo = false
 	
 	var body: some View {
 		ZStack {
@@ -48,6 +49,12 @@ struct ContentView: View {
 								.foregroundColor(.white)
 						}
 						.padding(.bottom, -5)
+						.onTapGesture {
+							showSelectCurrency.toggle()
+						}
+						.sheet(isPresented: $showSelectCurrency) {
+							SelectCurrency(leftCurrency: $leftCurrency, rightCurrency: $rightCurrency)
+						}
 						// Text field
 						TextField("Amount", text: $leftAmount)
 							.padding(7)
@@ -74,6 +81,12 @@ struct ContentView: View {
 								.frame(height: 35)
 						}
 						.padding(.bottom, -5)
+						.onTapGesture {
+							showSelectCurrency.toggle()
+						}
+						.sheet(isPresented: $showSelectCurrency) {
+							SelectCurrency(leftCurrency: $leftCurrency, rightCurrency: $rightCurrency)
+						}
 						// Text field
 						TextField("Amount", text: $rightAmount)
 							.padding(7)
@@ -92,13 +105,16 @@ struct ContentView: View {
 				HStack {
 					Spacer()
 					Button {
-						// Display exchange info screen
+						showExchangeInfo.toggle()
 					} label: {
 						Image(systemName: "info.circle.fill")
 					}
 					.font(.largeTitle)
 					.foregroundColor(.white)
 					.padding(.trailing)
+					.sheet(isPresented: $showExchangeInfo) {
+						ExchangeInfo()
+					}
 				}
 			}
 		}
