@@ -23,6 +23,7 @@ struct ExchangeRate: View {
 			
 			// Exchange rate text
 			Text(text)
+				.customFont(name: "Ringbearer", style: .caption1)
 			
 			// Right
 			Image(rightImage)

@@ -25,7 +25,7 @@ struct CurrencyIcon: View {
 				Spacer()
 				Text(currencyText)
 					.padding(3)
-					.font(.caption)
+					.customFont(name: "Ringbearer", style: .caption1)
 					.background(materialColor.color.opacity(0.75))
 			}
 		}
