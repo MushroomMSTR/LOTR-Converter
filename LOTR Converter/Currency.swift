@@ -30,3 +30,20 @@ enum CurrencyImage: String, CaseIterable {
 	case goldPenny = "goldpenny"
 	case goldPiece = "goldpiece"
 }
+
+enum MaterialColor: String {
+	case bronze = "Bronze"
+	case silver = "Silver"
+	case gold = "Gold"
+	
+	var color: Color {
+		switch self {
+		case .bronze:
+			return .brown
+		case .silver:
+			return .gray
+		case .gold:
+			return .yellow
+		}
+	}
+}

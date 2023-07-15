@@ -12,7 +12,7 @@ struct SelectCurrency: View {
 	@State var gridLayout = [GridItem(), GridItem(), GridItem()]
 	@Environment(\.dismiss) var dismiss
 
-    var body: some View {
+	var body: some View {
 		ZStack {
 			// Back
 			Image("parchment")
@@ -28,15 +28,15 @@ struct SelectCurrency: View {
 				// Currency Icon
 				LazyVGrid(columns: gridLayout) {
 					ForEach(0..<5) { i in
-						CurrencyIcon(currencyImage: CurrencyImage.allCases[i].rawValue, currencyText: CurrencyText.allCases[i].rawValue, currencyRarity: .brown)
+						CurrencyIcon(currencyImage: CurrencyImage.allCases[i].rawValue,
+									 currencyText: CurrencyText.allCases[i].rawValue,
+									 materialColor: getMaterialColor(from: CurrencyText.allCases[i]))
 					}
 				}
 				// Text
 				Text("Select the currency you would like to convert:")
 					.fontWeight(.semibold)
 					.multilineTextAlignment(.center)
-
-				// Currency Icon
 
 				// Done button
 				Button("Done") {
@@ -49,7 +49,19 @@ struct SelectCurrency: View {
 				.cornerRadius(20)
 			}
 		}
-    }
+	}
+	
+	// Function to return the MaterialColor from the CurrencyText
+	func getMaterialColor(from currency: CurrencyText) -> MaterialColor {
+		switch currency {
+		case .copperPenny:
+			return .bronze
+		case .silverPenny, .silverPiece:
+			return .silver
+		case .goldPenny, .goldPiece:
+			return .gold
+		}
+	}
 }
 
 struct SelectCurrency_Previews: PreviewProvider {
