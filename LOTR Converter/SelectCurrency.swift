@@ -27,8 +27,8 @@ struct SelectCurrency: View {
 					.multilineTextAlignment(.center)
 				// Currency Icon
 				LazyVGrid(columns: gridLayout) {
-					ForEach(0..<5) { _ in
-						CurrencyIcon(currencyImage: "copperpenny", currencyText: "Copper Penny", currencyRarity: .brown)
+					ForEach(0..<5) { i in
+						CurrencyIcon(currencyImage: CurrencyImage.allCases[i].rawValue, currencyText: CurrencyText.allCases[i].rawValue, currencyRarity: .brown)
 					}
 				}
 				// Text
