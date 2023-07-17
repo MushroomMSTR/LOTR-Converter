@@ -86,19 +86,13 @@
 		74229C9A2A5BC2FA00940C05 /* LOTR Converter */ = {
 			isa = PBXGroup;
 			children = (
+				746D2E932A6544A7006B1208 /* Models */,
+				746D2E942A6544B5006B1208 /* Views */,
+				746D2E952A6544BA006B1208 /* ViewModels */,
+				746D2E972A654575006B1208 /* Helpers */,
+				746D2E982A654583006B1208 /* Assets */,
 				746D2E462A633245006B1208 /* LOTR-Converter-Info.plist */,
-				746D2E322A63313F006B1208 /* Resourses */,
 				74229C9B2A5BC2FA00940C05 /* LOTR_ConverterApp.swift */,
-				74229C9D2A5BC2FA00940C05 /* ContentView.swift */,
-				74A4212D2A61251F00CAEB2C /* ExchangeInfo.swift */,
-				74E8E1232A619A7000716AF4 /* SelectCurrency.swift */,
-				746D2E302A630D1F006B1208 /* Helpers.swift */,
-				746D2E2E2A630B74006B1208 /* IconGrid.swift */,
-				746D2E2B2A62DA37006B1208 /* Currency.swift */,
-				74E8E1252A61A07500716AF4 /* CurrencyIcon.swift */,
-				74E8E1212A61726800716AF4 /* ExchangeRate.swift */,
-				746D2E472A63354B006B1208 /* CustomFont.swift */,
-				74229C9F2A5BC2FB00940C05 /* Assets.xcassets */,
 				74229CA12A5BC2FB00940C05 /* Preview Content */,
 			);
 			path = "LOTR Converter";
@@ -134,6 +128,53 @@
 				746D2E3C2A633182006B1208 /* example2.gif */,
 			);
 			path = ringbearer;
+			sourceTree = "<group>";
+		};
+		746D2E932A6544A7006B1208 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				746D2E2B2A62DA37006B1208 /* Currency.swift */,
+			);
+			name = Models;
+			path = ../Models;
+			sourceTree = "<group>";
+		};
+		746D2E942A6544B5006B1208 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74229C9D2A5BC2FA00940C05 /* ContentView.swift */,
+				74A4212D2A61251F00CAEB2C /* ExchangeInfo.swift */,
+				74E8E1232A619A7000716AF4 /* SelectCurrency.swift */,
+				746D2E2E2A630B74006B1208 /* IconGrid.swift */,
+				74E8E1252A61A07500716AF4 /* CurrencyIcon.swift */,
+				74E8E1212A61726800716AF4 /* ExchangeRate.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		746D2E952A6544BA006B1208 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		746D2E972A654575006B1208 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				746D2E302A630D1F006B1208 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		746D2E982A654583006B1208 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				746D2E472A63354B006B1208 /* CustomFont.swift */,
+				74229C9F2A5BC2FB00940C05 /* Assets.xcassets */,
+				746D2E322A63313F006B1208 /* Resourses */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
