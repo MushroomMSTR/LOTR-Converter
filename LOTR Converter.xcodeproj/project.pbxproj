@@ -88,7 +88,6 @@
 			children = (
 				746D2E932A6544A7006B1208 /* Models */,
 				746D2E942A6544B5006B1208 /* Views */,
-				746D2E952A6544BA006B1208 /* ViewModels */,
 				746D2E972A654575006B1208 /* Helpers */,
 				746D2E982A654583006B1208 /* Assets */,
 				746D2E462A633245006B1208 /* LOTR-Converter-Info.plist */,
@@ -150,13 +149,6 @@
 				74E8E1212A61726800716AF4 /* ExchangeRate.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		746D2E952A6544BA006B1208 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		746D2E972A654575006B1208 /* Helpers */ = {

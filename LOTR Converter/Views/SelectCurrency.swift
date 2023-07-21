@@ -9,36 +9,40 @@ import SwiftUI
 
 struct SelectCurrency: View {
 	
+	// MARK: - Environment Variable for Dismissing the View
 	@Environment(\.dismiss) var dismiss
+
+	// MARK: - State Variables for Selected Currencies
 	@Binding var leftCurrency: Currency
 	@Binding var rightCurrency: Currency
 	
+	// MARK: - Main User Interface
 	var body: some View {
 		ZStack {
-			// Back
+			// The background image
 			Image("parchment")
 				.resizable()
 				.ignoresSafeArea()
 				.background(.brown)
 			
 			VStack {
-				// Text
+				// Display the instruction for choosing the starting currency
 				Text("Select the currency you are starting with:")
 					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
 				
-				// Currency Icon
+				// Display the grid of currency icons for choosing the starting currency
 				IconGrid(currency: $leftCurrency)
 				
-				// Text
+				// Display the instruction for choosing the target currency
 				Text("Select the currency you would like to convert:")
 					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
 				
-				// Currency Icon
+				// Display the grid of currency icons for choosing the target currency
 				IconGrid(currency: $rightCurrency)
 				
-				// Done button
+				// Display the "Done" button which dismisses the view when tapped
 				Button("Done") {
 					dismiss()
 				}

@@ -7,17 +7,32 @@
 
 import SwiftUI
 
+// MARK: - Custom Font View Modifier
+// This struct is a ViewModifier which allows to apply a custom font with a specific text style
 struct CustomFont: ViewModifier {
+	
+	// Environment variable for current size category
 	@Environment(\.sizeCategory) var sizeCategory
 
+	// Name of the custom font
 	var name: String
+	
+	// Text style to be used with the font
 	var style: UIFont.TextStyle
 
+	// MARK: - Body for View Modifier
+	// Defines how to modify the content view
 	func body(content: Content) -> some View {
+		
+		// Calculate scaled size for the given text style
 		let scaledSize = UIFontMetrics.default.scaledValue(for: baseSize(for: style))
+		
+		// Apply custom font with scaled size to the content view
 		return content.font(.custom(name, size: scaledSize))
 	}
 
+	// MARK: - Base Size Calculation
+	// This function returns the base size for a given text style
 	private func baseSize(for style: UIFont.TextStyle) -> CGFloat {
 		switch style {
 		case .largeTitle: return 34
@@ -36,8 +51,12 @@ struct CustomFont: ViewModifier {
 	}
 }
 
+// MARK: - View Extension for Custom Font
+// This extension adds a customFont() modifier to all Views
 extension View {
 	func customFont(name: String, style: UIFont.TextStyle) -> some View {
+		
+		// Use the CustomFont ViewModifier with the given font name and style
 		self.modifier(CustomFont(name: name, style: style))
 	}
 }

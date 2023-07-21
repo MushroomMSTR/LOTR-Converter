@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 	
+	// MARK: - State Variables for Holding User Input and Currency Choices
 	@State var leftAmount = ""
 	@State var rightAmount = ""
 	@State var leftAmountTemp = ""
@@ -20,35 +21,38 @@ struct ContentView: View {
 	@State var showSelectCurrency = false
 	@State var showExchangeInfo = false
 	
+	// MARK: - Main User Interface
 	var body: some View {
+		// Using a ZStack allows overlaying views on top of each other
 		ZStack {
-			// Back
+			// The background image
 			Image("background")
 				.resizable()
 				.ignoresSafeArea()
+
+			// The main content of the view
 			VStack {
-				// Prancing pony image
+				// Display the logo for the app
 				Image("prancingpony")
 					.resizable()
 					.scaledToFit()
 					.frame(height: 200)
-				// Currency exchange text
+
+				// Display a title for the app
 				Text("Currency Exchange")
 					.customFont(name: "Ringbearer", style: .largeTitle)
 					.foregroundColor(.white)
 
-				// Currency conversion section
+				// Display the currency conversion section
 				HStack {
-					// Left
+					// Display the left currency section
 					VStack {
-						// Currency
+						// Display the left currency name and image
 						HStack {
-							// Currency Image
 							Image(CurrencyImage.allCases[Currency.allCases.firstIndex(of: leftCurrency)!].rawValue)
 								.resizable()
 								.scaledToFit()
 								.frame(height: 35)
-							// Currency text
 							Text(CurrencyText.allCases[Currency.allCases.firstIndex(of: leftCurrency)!].rawValue)
 								.font(.headline)
 								.foregroundColor(.white)
@@ -69,7 +73,7 @@ struct ContentView: View {
 						.background(Color(UIColor.systemGray6))
 						.cornerRadius(7)
 						.keyboardType(.decimalPad)
-						// For leftAmount
+						// Additional views and logic for the left currency section
 						.onChange(of: leftTyping ? leftAmount : leftAmountTemp) { _ in
 							if !rightTyping {
 								rightAmount = leftCurrency.convert(amountString: leftAmount, to: rightCurrency)
@@ -80,19 +84,17 @@ struct ContentView: View {
 						}
 					}
 					
-					// "="
+					// Display the equals sign
 					Image(systemName: "equal")
 						.font(.largeTitle)
 						.foregroundColor(.white)
-					// Right
+					// Display the right currency section
 					VStack {
-						// Currency
+						// Display the right currency name and image
 						HStack {
-							// Currency text
 							Text(CurrencyText.allCases[Currency.allCases.firstIndex(of: rightCurrency)!].rawValue)
 								.font(.headline)
 								.foregroundColor(.white)
-							// Currency Image
 							Image(CurrencyImage.allCases[Currency.allCases.firstIndex(of: rightCurrency)!].rawValue)
 								.resizable()
 								.scaledToFit()
@@ -115,7 +117,7 @@ struct ContentView: View {
 						.cornerRadius(7)
 						.multilineTextAlignment(.trailing)
 						.keyboardType(.decimalPad)
-						// For rightAmount
+						// Additional views and logic for the right currency section
 						.onChange(of: rightTyping ? rightAmount : rightAmountTemp) { _ in
 							if !leftTyping {
 								leftAmount = rightCurrency.convert(amountString: rightAmount, to: leftCurrency)
@@ -132,7 +134,7 @@ struct ContentView: View {
 				
 				Spacer()
 				
-				// Info button
+				// Info button. Additional views and logic for the main content
 				HStack {
 					Spacer()
 					Button {

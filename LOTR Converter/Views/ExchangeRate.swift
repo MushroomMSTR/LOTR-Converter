@@ -9,28 +9,34 @@ import SwiftUI
 
 struct ExchangeRate: View {
 	
+	// MARK: - The Image of the Left Currency
 	@State var leftImage: String
+
+	// MARK: - The Textual Representation of the Exchange Rate
 	@State var text: String
+
+	// MARK: - The Image of the Right Currency
 	@State var rightImage: String
 	
+	// MARK: - Main User Interface
 	var body: some View {
+		// Creates a horizontal stack of views
 		HStack {
-			// Left
+			// Display the image of the left currency
 			Image(leftImage)
-				.resizable()
-				.scaledToFit()
-				.frame(height: 35)
-			
-			// Exchange rate text
+				.resizable() // Resizes the image to fit the frame
+				.scaledToFit() // Scales the image to fit within the frame while maintaining its aspect ratio
+				.frame(height: 35) // Sets the height of the frame
+
+			// Display the exchange rate text
 			Text(text)
-				.customFont(name: "Ringbearer", style: .caption1)
-			
-			// Right
+				.customFont(name: "Ringbearer", style: .caption1) // Applies a custom font to the text
+
+			// Display the image of the right currency
 			Image(rightImage)
-				.resizable()
-				.scaledToFit()
-				.frame(height: 35)
-			
+				.resizable() // Resizes the image to fit the frame
+				.scaledToFit() // Scales the image to fit within the frame while maintaining its aspect ratio
+				.frame(height: 35) // Sets the height of the frame
 		}
 	}
 }
