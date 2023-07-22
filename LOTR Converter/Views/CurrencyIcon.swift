@@ -31,6 +31,7 @@ struct CurrencyIcon: View {
 			VStack {
 				Spacer() // Pushes the text to the bottom
 				Text(currencyText)
+					.foregroundColor(.black)
 					.padding(3) // Adds padding around the text
 					.customFont(name: "Ringbearer", style: .caption1) // Applies a custom font to the text
 					.background(materialColor.color.opacity(0.75)) // Adds a background to the text with a specified opacity

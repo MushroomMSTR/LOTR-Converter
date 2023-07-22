@@ -30,6 +30,7 @@ struct SelectCurrency: View {
 				Text("Select the currency you are starting with:")
 					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
+					.foregroundColor(.black)
 				
 				// Display the grid of currency icons for choosing the starting currency
 				IconGrid(currency: $leftCurrency)
@@ -38,6 +39,7 @@ struct SelectCurrency: View {
 				Text("Select the currency you would like to convert:")
 					.customFont(name: "Ringbearer", style: .title2)
 					.multilineTextAlignment(.center)
+					.foregroundColor(.black)
 				
 				// Display the grid of currency icons for choosing the target currency
 				IconGrid(currency: $rightCurrency)

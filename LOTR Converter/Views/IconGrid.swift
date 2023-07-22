@@ -28,7 +28,7 @@ struct IconGrid: View {
 								 currencyText: CurrencyText.allCases[i].rawValue,
 								 materialColor: getMaterialColor(from: CurrencyText.allCases[i]))
 					.overlay(RoundedRectangle(cornerRadius: 25)
-						.stroke(lineWidth: 3)
+						.stroke(Color.black, lineWidth: 3)
 						.opacity(0.5))
 					.shadow(color: .black, radius: 7)
 				} else {
