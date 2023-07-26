@@ -16,8 +16,8 @@ struct ContentView: View {
 	@State var rightAmountTemp = ""
 	@State var leftTyping = false
 	@State var rightTyping = false
-	@State var leftCurrency: Currency = .silverPiece
-	@State var rightCurrency: Currency = .goldPiece
+	@State var leftCurrency: Currency = Currency(rawValue: UserDefaults.standard.double(forKey: "LeftCurrency")) ?? .silverPiece
+	@State var rightCurrency: Currency = Currency(rawValue: UserDefaults.standard.double(forKey: "RightCurrency")) ?? .goldPiece
 	@State var showSelectCurrency = false
 	@State var showExchangeInfo = false
 	
@@ -81,6 +81,7 @@ struct ContentView: View {
 						}
 						.onChange(of: leftCurrency) { _ in
 							leftAmount = rightCurrency.convert(amountString: rightAmount, to: leftCurrency)
+							UserDefaults.standard.set(leftCurrency.rawValue, forKey: "LeftCurrency")
 						}
 					}
 					
@@ -125,6 +126,7 @@ struct ContentView: View {
 						}
 						.onChange(of: rightCurrency) { _ in
 							rightAmount = leftCurrency.convert(amountString: leftAmount, to: rightCurrency)
+							UserDefaults.standard.set(rightCurrency.rawValue, forKey: "RightCurrency")
 						}
 					}
 				}
